@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Palettes - Demo</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/styles/style.css" />
+
+    <meta property="og:image" content="/static/images/icon.png" />
+    <meta property="og:description" content="🎨 Color creativity" />
+    <meta name="url" content="https://palettes.deta.dev/demo">
+    <meta property="og:title" content="Palettes" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#303B7A">
+
+</head>
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-text">Palettes</div>
+        <div onclick="RefreshPalette()" class="menu-option"><i data-feather="refresh-cw"></i>
+            <span class="tip">Generate new</span>
+        </div>
+        <div id="download" class="menu-option"><i data-feather="download"></i>
+            <span class="tip">Download app</span>
+        </div>
+        <div id="api" class="menu-option"><i data-feather="code"></i>
+            <span class="tip">Palettes Api</span>
+        </div>
+        <div id="src" class="menu-option"><i data-feather="github"></i>
+            <span class="tip">App code</span>
+        </div>
+    </div>
+    <div id="PrimaryPalette" class="color-grid">
+        {% for color in items %}
+        <div id="{{ color }}" class="color-card">
+            {{ color }}
+        </div>
+        {% endfor %}
+    </div>
+    <!-- <div class="menu-bar secondary"><div class="menu-text secondary">Download the app for more features</div></div> -->
+</body>
+
+<script src="/static/scripts/script.js"></script>
+<script src="/static/scripts/feather.js"></script>
+<script>
+    feather.replace()
+</script>
+
+</html>

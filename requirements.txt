@@ -1,0 +1,5 @@
+git+https://github.com/SlumberDemon/color-extract-mod
+aiohttp
+fastapi
+pillow
+jinja2
